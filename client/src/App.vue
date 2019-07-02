@@ -1,13 +1,23 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+<!-- eslint-disable -->
+<!-- eslint-disable vue/no-v-html -->
+  <v-app>
+    <Navbar/>
+    <!-- <img src="./assets/logo.png"> -->
+    <main>
+      <v-container fluid>
+        <router-view/>
+      </v-container>
+    </main>
+  </v-app>
 </template>
 
 <script>
+import Navbar from './components/Navbar'
 export default {
-  name: 'App'
+  components: {
+    Navbar
+  }
 }
 </script>
 
